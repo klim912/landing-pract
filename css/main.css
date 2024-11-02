@@ -962,7 +962,7 @@ margin-bottom: 29px;
 
 .subscribe__search{
   display: flex;
- align-items: center;
+  align-items: center;
 }
 
 .subscribe__search input{
@@ -983,7 +983,7 @@ margin-bottom: 29px;
   position: relative;
   right: 190px;
   width: 190px;
-  height: 60px;
+  height: 62px;
   border-radius: 80px;
   background: rgb(254, 70, 28);
   border:0;
@@ -994,6 +994,7 @@ margin-bottom: 29px;
   line-height: 15px;
   letter-spacing: 0%;
   text-align: center;
+  cursor: pointer;
 }
 
 .contact__wrapper{
@@ -1174,6 +1175,7 @@ margin-bottom: 46px;
   letter-spacing: 0%;
   text-align: center;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .contact__footer iframe{
