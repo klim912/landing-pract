@@ -16,9 +16,9 @@ header {
   line-height: 15px;
   text-transform: capitalize;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .header__logo {
@@ -29,9 +29,8 @@ header {
 
 .header__navbar {
   display: flex;
-  flex-direction: row;
   gap: 30px;
-  margin: 20px 50px 15px 480px;
+  margin: 20px;
 }
 
 .header__item {
@@ -39,8 +38,7 @@ header {
   color: #ffffff;
 }
 
-.header__item_active:hover {
-  text-decoration: none;
+.header__item:hover {
   color: #fe461c;
   transition: 0.3s;
 }
@@ -49,7 +47,7 @@ header {
   border: 0;
   min-width: 152px;
   min-height: 50px;
-  padding: 17px 14px 18px 15px;
+  padding: 17px 14px;
   background: #fe461c;
   color: #ffffff;
   font-family: Outfit;
@@ -60,11 +58,57 @@ header {
   cursor: pointer;
 }
 
-@media (max-width:768px){
-  .header-container{
+/* Стилі для бургер-меню */
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.header__burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .header__button{
     display: none;
   }
+  
+  .header-container{
+    justify-content: space-around;
+  }
+
+  .header__navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1f2235;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .header__navbar.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__item:hover {
+    color: #fe461c;
 }
+
+  .header__burger {
+    display: flex;
+  }
+}
+
 
 .banner {
   display: flex;
